@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Safira Alika Putri</title>
-    <!-- Menghubungkan Google Fonts -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Menghubungkan CSS Eksternal -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,6 +17,7 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Proyek</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -33,7 +32,7 @@
                 <span class="badge">Mahasiswa Sistem Informasi</span>
                 <h1>Safira Alika Putri</h1>
                 <p>Web Development Enthusiast yang antusias membangun struktur website modern, responsif, dan ramah pengguna melalui Tech Class HITLAB.</p>
-                <a href="#contact" class="btn-primary">Hubungi Saya</a>
+                <a href="#projects" class="btn-primary">Lihat Proyek Saya</a>
             </div>
         </div>
     </section>
@@ -44,29 +43,66 @@
             <p>Halo! Saya Safira Alika Putri, mahasiswa S1 Sistem Informasi di UIN Syarif Hidayatullah Jakarta. Saya memiliki ketertarikan kuat pada pengembangan antarmuka web dan teknologi digital. Melalui program Tech Class Web Dev HITLAB, saya terus mengasah kemampuan menyusun kode HTML semantik dan desain CSS modern.</p>
         </section>
 
-        <section id="skills" class="section-area">
-            <h2>Daftar Skill & Keahlian</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <span class="level intermediate">Intermediate</span>
-                    <h3>HTML5 & Semantik</h3>
-                    <p>Menyusun struktur halaman web yang bersih, terorganisir, dan ramah mesin pencari.</p>
+        <!-- Section Proyek (Minimal 3 Kartu Proyek) -->
+        <section id="projects" class="section-area">
+            <h2>Proyek Saya</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <span class="project-tag">HTML & GitHub Pages</span>
+                    <h3>Website Portofolio Pribadi</h3>
+                    <p>Halaman profil responsif menggunakan HTML5 semantik dan CSS3 eksternal yang di-deploy melalui GitHub Pages.</p>
+                    <a href="https://github.io" target="_blank" class="project-link">Kunjungi Proyek &rarr;</a>
                 </div>
-                <div class="skill-card">
-                    <span class="level intermediate">Intermediate</span>
-                    <h3>CSS3, Flexbox & Grid</h3>
-                    <p>Merancang tata letak modern, kartu komponen, dan tampilan responsif di berbagai ukuran layar.</p>
+                <div class="project-card">
+                    <span class="project-tag">Web Dasar</span>
+                    <h3>Struktur Halaman Semantik</h3>
+                    <p>Implementasi elemen semantik modern, tabel data terstruktur, dan formulir validasi pengguna berbasis HTML murni.</p>
+                    <a href="https://github.com" target="_blank" class="project-link">Lihat Repositori &rarr;</a>
                 </div>
-                <div class="skill-card">
-                    <span class="level basic">Basic</span>
-                    <h3>Git & GitHub</h3>
-                    <p>Mengelola versi kode proyek dan melakukan publikasi website melalui GitHub Pages.</p>
+                <div class="project-card">
+                    <span class="project-tag">UI Design</span>
+                    <h3>Desain Kartu Responsif</h3>
+                    <p>Eksplorasi tata letak CSS Grid dan Flexbox dengan skema warna hijau zamrud gelap dan adaptasi layar mobile.</p>
+                    <a href="#contact" class="project-link">Diskusi Proyek &rarr;</a>
                 </div>
-                <div class="skill-card">
-                    <span class="level advance">Advance</span>
-                    <h3>Manajemen Dokumen & Office</h3>
-                    <p>Pengolahan data, pembuatan laporan terstruktur, dan alur dokumentasi digital.</p>
-                </div>
+            </div>
+        </section>
+
+        <!-- Section Tabel Skill (Sesuai Ketentuan Tugas Sebelumnya) -->
+        <section id="skills" class="section-card">
+            <h2>Daftar Skill</h2>
+            <div class="table-wrapper">
+                <table class="skill-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Skill</th>
+                            <th>Tingkat Kemahiran</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>HTML Dasar & Semantik</td>
+                            <td><span class="level intermediate">Intermediate</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>CSS3, Flexbox & Grid</td>
+                            <td><span class="level intermediate">Intermediate</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Git & GitHub</td>
+                            <td><span class="level basic">Basic</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Microsoft Office & Manajemen Dokumen</td>
+                            <td><span class="level advance">Advance</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
