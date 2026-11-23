@@ -11,8 +11,8 @@ html {
 }
 
 body {
-    background-color: #f1f5f9;
-    color: #1e293b;
+    background-color: #f4f7f5;
+    color: #1a2e26;
     line-height: 1.6;
 }
 
@@ -24,12 +24,12 @@ body {
 
 /* 1. Layouting Navigasi dengan Flexbox */
 .navbar {
-    background-color: #0f172a;
+    background-color: #043927;
     padding: 18px 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+    box-shadow: 0 4px 12px rgba(4, 57, 39, 0.2);
 }
 
 .nav-content {
@@ -46,7 +46,7 @@ body {
 }
 
 .logo span {
-    color: #38bdf8;
+    color: #6ee7b7;
 }
 
 .nav-links {
@@ -56,19 +56,19 @@ body {
 }
 
 .nav-links a {
-    color: #cbd5e1;
+    color: #d1fae5;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #38bdf8;
+    color: #6ee7b7;
 }
 
 /* Hero Section dengan Flexbox */
 .hero {
-    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    background: linear-gradient(135deg, #043927 0%, #0a5c40 100%);
     color: #ffffff;
     padding: 64px 0;
     margin-bottom: 40px;
@@ -85,14 +85,14 @@ body {
     height: 165px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #38bdf8;
+    border: 4px solid #6ee7b7;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .badge {
     display: inline-block;
-    background-color: rgba(56, 189, 248, 0.18);
-    color: #7dd3fc;
+    background-color: rgba(110, 231, 183, 0.18);
+    color: #a7f3d0;
     padding: 6px 14px;
     border-radius: 999px;
     font-size: 0.85rem;
@@ -107,7 +107,7 @@ body {
 }
 
 .hero-text p {
-    color: #e2e8f0;
+    color: #ecfdf5;
     max-width: 600px;
     margin-bottom: 24px;
 }
@@ -118,12 +118,12 @@ body {
     padding: 32px;
     margin-bottom: 32px;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+    box-shadow: 0 4px 20px rgba(4, 57, 39, 0.06);
 }
 
 .section-card h2, .section-area h2 {
     font-size: 1.5rem;
-    color: #0f172a;
+    color: #043927;
     margin-bottom: 16px;
 }
 
@@ -142,25 +142,25 @@ body {
     background-color: #ffffff;
     padding: 24px;
     border-radius: 16px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+    border: 1px solid #d1fae5;
+    box-shadow: 0 4px 14px rgba(4, 57, 39, 0.05);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .skill-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
+    box-shadow: 0 10px 24px rgba(4, 57, 39, 0.12);
 }
 
 .skill-card h3 {
     font-size: 1.1rem;
     margin: 12px 0 8px;
-    color: #0f172a;
+    color: #043927;
 }
 
 .skill-card p {
     font-size: 0.9rem;
-    color: #475569;
+    color: #4b6358;
 }
 
 .level {
@@ -173,12 +173,12 @@ body {
 
 .level.advance {
     background-color: #dcfce7;
-    color: #166534;
+    color: #043927;
 }
 
 .level.intermediate {
-    background-color: #e0f2fe;
-    color: #075985;
+    background-color: #d1fae5;
+    color: #065f46;
 }
 
 .level.basic {
@@ -188,7 +188,7 @@ body {
 
 /* Form Kontak */
 .section-subtitle {
-    color: #64748b;
+    color: #526b60;
     margin-bottom: 20px;
 }
 
@@ -207,6 +207,7 @@ body {
 .form-group label {
     font-weight: 600;
     font-size: 0.95rem;
+    color: #043927;
 }
 
 .form-group input, .form-group textarea {
@@ -219,12 +220,12 @@ body {
 
 .form-group input:focus, .form-group textarea:focus {
     outline: none;
-    border-color: #0284c7;
+    border-color: #043927;
 }
 
 .btn-primary {
     display: inline-block;
-    background-color: #0284c7;
+    background-color: #10b981;
     color: #ffffff;
     padding: 12px 24px;
     border: none;
@@ -238,13 +239,13 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #0369a1;
+    background-color: #059669;
 }
 
 /* Footer */
 footer {
-    background-color: #0f172a;
-    color: #94a3b8;
+    background-color: #043927;
+    color: #a7f3d0;
     text-align: center;
     padding: 24px 0;
     margin-top: 40px;
