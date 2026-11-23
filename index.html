@@ -3,86 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Safira Alika</title>
+    <title>Portofolio Safira Alika Putri</title>
+    <!-- Menghubungkan Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Menghubungkan CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Safira Alika Putri </h1>
-        <p>Mahasiswa Sistem Informasi | Web Development Enthusiast</p>
-        <img src="webcam-toy-photo2.jpg" alt="Foto Profil Safira Alika" width="150">
-        
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">Safira<span>.dev</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section id="about">
+    <section class="hero">
+        <div class="container hero-content">
+            <img src="webcam-toy-photo2.jpg" alt="Foto Profil Safira Alika" class="profile-img">
+            <div class="hero-text">
+                <span class="badge">Mahasiswa Sistem Informasi</span>
+                <h1>Safira Alika Putri</h1>
+                <p>Web Development Enthusiast yang antusias membangun struktur website modern, responsif, dan ramah pengguna melalui Tech Class HITLAB.</p>
+                <a href="#contact" class="btn-primary">Hubungi Saya</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <section id="about" class="section-card">
             <h2>About Me</h2>
-            <p>Halo! Saya Safira Alika Putri, mahasiswa S1 Sistem Informasi UIN Syarif Hidayatullah Jakarta. Saya termotivasi belajar membuat struktur website yang rapi dan fungsional melalui Tech Class HITLAB.</p>
-        </section>
-    
-
-        <section id="skills">
-            <h2>Daftar Skill</h2>
-            <table border="1" cellpadding="8" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Nama Skill</th>
-                        <th>Tingkat Kemahiran</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>HTML Dasar & Semantik</td>
-                        <td>Intermediate</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Git & GitHub</td>
-                        <td>Basic</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Microsoft Office & Manajemen Dokumen</td>
-                        <td>Advance</td>
-                    </tr>
-                </tbody>
-            </table>
+            <p>Halo! Saya Safira Alika Putri, mahasiswa S1 Sistem Informasi di UIN Syarif Hidayatullah Jakarta. Saya memiliki ketertarikan kuat pada pengembangan antarmuka web dan teknologi digital. Melalui program Tech Class Web Dev HITLAB, saya terus mengasah kemampuan menyusun kode HTML semantik dan desain CSS modern.</p>
         </section>
 
-        <section id="contact">
+        <section id="skills" class="section-area">
+            <h2>Daftar Skill & Keahlian</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <span class="level intermediate">Intermediate</span>
+                    <h3>HTML5 & Semantik</h3>
+                    <p>Menyusun struktur halaman web yang bersih, terorganisir, dan ramah mesin pencari.</p>
+                </div>
+                <div class="skill-card">
+                    <span class="level intermediate">Intermediate</span>
+                    <h3>CSS3, Flexbox & Grid</h3>
+                    <p>Merancang tata letak modern, kartu komponen, dan tampilan responsif di berbagai ukuran layar.</p>
+                </div>
+                <div class="skill-card">
+                    <span class="level basic">Basic</span>
+                    <h3>Git & GitHub</h3>
+                    <p>Mengelola versi kode proyek dan melakukan publikasi website melalui GitHub Pages.</p>
+                </div>
+                <div class="skill-card">
+                    <span class="level advance">Advance</span>
+                    <h3>Manajemen Dokumen & Office</h3>
+                    <p>Pengolahan data, pembuatan laporan terstruktur, dan alur dokumentasi digital.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-card">
             <h2>Form Kontak</h2>
-            <form action="#" method="post">
-                <div>
-                    <label for="nama">Nama:</label><br>
-                    <input type="text" id="nama" name="nama" required>
+            <p class="section-subtitle">Tertarik berdiskusi atau berkolaborasi? Silakan tinggalkan pesan di bawah ini.</p>
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
                 </div>
-                <br>
-                <div>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required>
+                <div class="form-group">
+                    <label for="email">Alamat Email</label>
+                    <input type="email" id="email" name="email" placeholder="nama@email.com" required>
                 </div>
-                <br>
-                <div>
-                    <label for="pesan">Pesan:</label><br>
-                    <textarea id="pesan" name="pesan" rows="4" cols="30" required></textarea>
+                <div class="form-group">
+                    <label for="pesan">Pesan</label>
+                    <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesan Anda di sini..." required></textarea>
                 </div>
-                <br>
-                <button type="submit">Submit</button>
+                <button type="submit" class="btn-primary">Kirim Pesan</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Safira Alika - Tech Class Web Dev HITLAB</p>
+        <div class="container">
+            <p>&copy; 2026 Safira Alika Putri &mdash; Tech Class Web Dev HITLAB</p>
+        </div>
     </footer>
 
 </body>
