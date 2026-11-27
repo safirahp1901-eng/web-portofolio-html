@@ -1,331 +1,89 @@
-/* Reset & Typography (Google Fonts) */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+:root{--bg:#f1f7f4;--card:#fff;--text:#1d2b25;--muted:#5d6e66;--primary:#0b7a4f;--accent:#10b981;--head:#064e3b;--border:#dfeae4;--shadow:0 8px 28px rgba(6,78,59,.09);--hero1:#064e3b;--hero2:#0b7a4f}
+[data-theme="dark"]{--bg:#06110c;--card:#0e211a;--text:#e4f3ec;--muted:#9bb7aa;--primary:#34d399;--accent:#34d399;--head:#a7f3d0;--border:#1b3a2d;--shadow:0 8px 28px rgba(0,0,0,.5);--hero1:#03150e;--hero2:#0a3a29}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-padding-top:80px}
+body{font-family:"Montserrat",sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;transition:background .5s,color .5s}
+a{color:inherit;text-decoration:none}
+h2{color:var(--head);margin-bottom:12px;transition:color .5s}
+#progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,#34d399,#fbbf24);z-index:200}
+
+header{position:sticky;top:0;z-index:100;background:var(--hero1);border-bottom:1px solid rgba(255,255,255,.08);transition:background .5s}
+nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 5%;max-width:1100px;margin:auto;color:#fff}
+.logo{font-weight:800;font-size:1.15rem}.logo span{color:#34d399}
+nav ul{display:flex;gap:22px;list-style:none;margin-left:auto}
+nav ul a{font-weight:600;font-size:.88rem;padding:4px 0;border-bottom:2px solid transparent;transition:.25s}
+nav ul a:hover,nav ul a.active{border-color:#34d399;color:#a7f3d0}
+#themeToggle{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);font-size:1.1rem;cursor:pointer;transition:transform .5s,background .3s}
+#themeToggle:hover{background:rgba(255,255,255,.25);transform:rotate(25deg) scale(1.1)}
+
+.hero{display:flex;align-items:center;justify-content:center;gap:36px;padding:64px 5%;background:linear-gradient(135deg,var(--hero1),var(--hero2),var(--hero1));background-size:200% 200%;animation:flow 12s ease infinite;color:#fff;transition:background .5s}
+@keyframes flow{50%{background-position:100% 50%}}
+.hero img{width:190px;height:190px;border-radius:50%;object-fit:cover;border:4px solid #34d399;box-shadow:0 0 0 8px rgba(52,211,153,.18),0 12px 40px rgba(0,0,0,.4);animation:float 5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.hero-text{max-width:560px}
+.chip{display:inline-block;background:rgba(52,211,153,.2);color:#a7f3d0;padding:3px 14px;border-radius:20px;font-size:.78rem;font-weight:600}
+.hero h1{font-size:2.5rem;font-weight:800;line-height:1.2;margin:12px 0 8px}
+.tagline{min-height:3.4em;margin-bottom:18px;color:#d5f5e6}
+.tagline strong{color:#fde68a}
+.cursor{animation:blink 1s steps(2) infinite;color:#34d399}
+@keyframes blink{50%{opacity:0}}
+
+.btn{display:inline-block;background:var(--accent);color:#04281b;font:inherit;font-weight:700;border:0;padding:11px 24px;border-radius:10px;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(16,185,129,.45)}
+.btn:disabled{opacity:.6;cursor:wait}
+
+main{max-width:1100px;margin:auto;padding:0 5%}
+section{margin-top:36px}
+.card{background:var(--card);padding:32px;border-radius:18px;box-shadow:var(--shadow);border:1px solid var(--border);transition:background .5s,border .5s}
+.title{margin-bottom:16px}
+.card p{color:var(--muted)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.reveal.show{opacity:1;transform:none}
+
+.stats{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
+.stats div{flex:1;min-width:110px;text-align:center;padding:14px;border-radius:14px;background:var(--bg);border:1px solid var(--border)}
+.stats b{display:block;font-size:2rem;color:var(--primary);line-height:1.2}
+.stats span{font-size:.75rem;color:var(--muted)}
+
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.project{background:var(--card);padding:24px;border-radius:16px;border:1px solid var(--border);box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;transition:transform .3s,box-shadow .3s,background .5s}
+.project:hover{transform:translateY(-8px) rotate(-.6deg);box-shadow:0 18px 40px rgba(16,185,129,.25)}
+.tag{align-self:flex-start;background:var(--bg);color:var(--primary);font-size:.72rem;font-weight:600;padding:2px 10px;border-radius:6px}
+.project h3{color:var(--head);font-size:1.05rem}
+.project p{color:var(--muted);font-size:.85rem;flex:1}
+.project a{color:var(--primary);font-weight:700;font-size:.85rem}
+.project a:hover{text-decoration:underline}
+
+.table-wrap{overflow-x:auto;margin-top:8px}
+table{width:100%;border-collapse:collapse}
+th{background:#064e3b;color:#fff;text-align:left;padding:14px 16px}
+td{padding:14px 16px;border-bottom:1px solid var(--border)}
+tbody tr{transition:background .2s}tbody tr:hover{background:var(--bg)}
+.badge{font-size:.75rem;font-weight:700;padding:3px 12px;border-radius:8px}
+.basic{background:#fef3c7;color:#92400e}.inter{background:#d1fae5;color:#065f46}.adv{background:#dbeafe;color:#1e40af}
+
+form{display:flex;flex-direction:column;gap:6px;margin-top:16px}
+label{font-weight:600;font-size:.85rem;margin-top:8px;display:flex;justify-content:space-between}
+label small{color:var(--muted);font-weight:400}
+input,textarea{font:inherit;padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);transition:.25s}
+input:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px rgba(16,185,129,.2)}
+form .btn{align-self:flex-start;margin-top:14px}
+#formMsg{margin-top:18px;padding:16px 20px;border-radius:12px;background:rgba(16,185,129,.15);border-left:5px solid var(--accent);color:var(--head);font-weight:600;animation:pop .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes pop{from{opacity:0;transform:scale(.85) translateY(10px)}}
+
+footer{margin-top:50px;padding:24px;text-align:center;background:var(--hero1);color:#a7f3d0;font-size:.8rem;transition:background .5s}
+#toTop{position:fixed;right:20px;bottom:20px;width:46px;height:46px;border-radius:50%;border:0;background:var(--accent);color:#04281b;font-size:1.3rem;font-weight:800;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.3);opacity:0;pointer-events:none;transform:translateY(20px);transition:.3s}
+#toTop.show{opacity:1;pointer-events:auto;transform:none}
+.confetti{position:fixed;top:-12px;width:10px;height:14px;z-index:300;pointer-events:none;border-radius:2px}
+
+@media (max-width:768px){
+  nav{flex-wrap:wrap;justify-content:space-between}
+  nav ul{order:3;width:100%;justify-content:space-between;gap:8px;margin:0}
+  .hero{flex-direction:column;text-align:center;padding:44px 5%}
+  .hero img{width:150px;height:150px}
+  .hero h1{font-size:1.8rem}
+  .tagline{min-height:4.8em}
+  .project-grid{grid-template-columns:1fr}
+  .card{padding:22px}
 }
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: #f4f7f5;
-    color: #1a2e26;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 24px;
-}
-
-/* 1. Layouting Navigasi dengan Flexbox */
-.navbar {
-    background-color: #043927;
-    padding: 18px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 12px rgba(4, 57, 39, 0.2);
-}
-
-.nav-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    color: #ffffff;
-    font-size: 1.4rem;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.logo span {
-    color: #6ee7b7;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 28px;
-}
-
-.nav-links a {
-    color: #d1fae5;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #6ee7b7;
-}
-
-/* Hero Section dengan Flexbox */
-.hero {
-    background: linear-gradient(135deg, #043927 0%, #0a5c40 100%);
-    color: #ffffff;
-    padding: 64px 0;
-    margin-bottom: 40px;
-}
-
-.hero-content {
-    display: flex;
-    align-items: center;
-    gap: 36px;
-}
-
-.profile-img {
-    width: 165px;
-    height: 165px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #6ee7b7;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-.badge {
-    display: inline-block;
-    background-color: rgba(110, 231, 183, 0.18);
-    color: #a7f3d0;
-    padding: 6px 14px;
-    border-radius: 999px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 12px;
-}
-
-.hero-text h1 {
-    font-size: 2.3rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-.hero-text p {
-    color: #ecfdf5;
-    max-width: 600px;
-    margin-bottom: 24px;
-}
-
-/* 3. Box Model pada Kartu */
-.section-card {
-    background-color: #ffffff;
-    padding: 32px;
-    margin-bottom: 32px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(4, 57, 39, 0.06);
-}
-
-.section-card h2, .section-area h2 {
-    font-size: 1.5rem;
-    color: #043927;
-    margin-bottom: 16px;
-}
-
-.section-area {
-    margin-bottom: 36px;
-}
-
-/* 1. Layouting 3 Kartu Proyek Sejajar Horizontal dengan CSS Grid */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.project-card {
-    background-color: #ffffff;
-    padding: 24px;
-    border-radius: 16px;
-    border: 1px solid #d1fae5;
-    box-shadow: 0 4px 14px rgba(4, 57, 39, 0.05);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 26px rgba(4, 57, 39, 0.14);
-}
-
-.project-tag {
-    display: inline-block;
-    background-color: #ecfdf5;
-    color: #043927;
-    padding: 4px 10px;
-    border-radius: 8px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    width: fit-content;
-}
-
-.project-card h3 {
-    font-size: 1.15rem;
-    margin: 12px 0 8px;
-    color: #043927;
-}
-
-.project-card p {
-    font-size: 0.92rem;
-    color: #4b6358;
-    margin-bottom: 16px;
-}
-
-.project-link {
-    color: #059669;
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.project-link:hover {
-    color: #043927;
-    text-decoration: underline;
-}
-
-/* Tabel Skill */
-.table-wrapper {
-    overflow-x: auto;
-}
-
-.skill-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 8px;
-}
-
-.skill-table th, .skill-table td {
-    padding: 14px 16px;
-    text-align: left;
-    border-bottom: 1px solid #e2e8f0;
-}
-
-.skill-table th {
-    background-color: #043927;
-    color: #ffffff;
-    font-weight: 600;
-}
-
-.skill-table tr:hover {
-    background-color: #f0fdf4;
-}
-
-.level {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 8px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.level.advance {
-    background-color: #dcfce7;
-    color: #043927;
-}
-
-.level.intermediate {
-    background-color: #d1fae5;
-    color: #065f46;
-}
-
-.level.basic {
-    background-color: #fef3c7;
-    color: #92400e;
-}
-
-/* Form Kontak */
-.section-subtitle {
-    color: #526b60;
-    margin-bottom: 20px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.form-group label {
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: #043927;
-}
-
-.form-group input, .form-group textarea {
-    padding: 12px 14px;
-    border: 1px solid #cbd5e1;
-    border-radius: 10px;
-    font-size: 0.95rem;
-    transition: border-color 0.2s ease;
-}
-
-.form-group input:focus, .form-group textarea:focus {
-    outline: none;
-    border-color: #043927;
-}
-
-.btn-primary {
-    display: inline-block;
-    background-color: #10b981;
-    color: #ffffff;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.25s ease;
-    width: fit-content;
-}
-
-.btn-primary:hover {
-    background-color: #059669;
-}
-
-/* Footer */
-footer {
-    background-color: #043927;
-    color: #a7f3d0;
-    text-align: center;
-    padding: 24px 0;
-    margin-top: 40px;
-    font-size: 0.9rem;
-}
-
-/* 4. Responsive Design (@media queries untuk Mobile <= 768px) */
-@media (max-width: 768px) {
-    .nav-content {
-        flex-direction: column;
-        gap: 14px;
-    }
-
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .btn-primary {
-        width: 100%;
-        text-align: center;
-    }
-}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
